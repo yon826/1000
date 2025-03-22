@@ -9,7 +9,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
         body { background-color: #f8e8e3; font-family: 'Arial', sans-serif; }
         .timeline { position: relative; width: 90%; margin: auto; }
-        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; width: 4px; height: 100%; background-color: #ff85a2; transform: translateX(-50%); }
+        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; width: 4px; height: calc(100% - 170px); background-color: #ff85a2; transform: translateX(-50%); }
+        .timeline-item { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; }
         .timeline-item { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; }
         .timeline-content { width: 45%; background: linear-gradient(135deg, #ffd3e3, #fff); padding: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); text-align: center; font-weight: bold; font-size: 0.7rem; position: relative; }
         .bg-container { position: relative; width: 45%; height: auto; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
@@ -25,6 +26,19 @@
         .snowflake { position: absolute; top: -10px; background: white; width: 10px; height: 10px; border-radius: 50%; opacity: 0.8; animation: snowfall 5s linear infinite; }
         @keyframes snowfall { from { transform: translateY(-10px); } to { transform: translateY(100%); } }
         h1 { font-family: 'Jua', sans-serif; }
+        .final-message {
+            font-family: 'Jua', sans-serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff5e78;
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #ffd3e3, #fff);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+    
     </style>
 </head>
 <body class="flex flex-col items-center p-4">
@@ -50,7 +64,7 @@
         <div class="timeline-item"><div class="bg-container"><img src="220927.jpg" alt="우리의 사진"></div><div class="timeline-content">22.09.27<br>버스정류장에서💘 </div></div>
         <div class="timeline-item bg-sea"><div class="timeline-content">22.12.15<br>강릉바다🌊 </div><div class="bg-container"><img src="221225.jpg" alt="우리의 사진"></div></div>
         <div class="timeline-item bg-heart"><div class="bg-container"><img src="230107.webp" alt="우리의 사진"></div><div class="timeline-content">23.01.08<br>말랑생일🎉 </div></div>
-        <div class="timeline-item bg-spring"><div class="timeline-content">23.03.01<br>꽃! 벚꽃!🌸</div><div class="bg-container"><img src="230401.jpg" alt="우리의 사진"></div></div>
+        <div class="timeline-item bg-spring"><div class="timeline-content">23.03.01 <br>꽃! 벚꽃!🌸</div><div class="bg-container"><img src="230401.jpg" alt="우리의 사진"></div></div>
         <div class="timeline-item bg-heart"><div class="bg-container"><img src="230626.jpg" alt="우리의 사진"></div><div class="timeline-content">23.06.26<br>1주년 커플링💍</div></div>
         <div class="timeline-item"><div class="timeline-content">23.08.06<br>그냥 기여워서 넣은 사진❤️ </div><div class="bg-container"><img src="230806.jpg" alt="우리의 사진"></div></div>
         <div class="timeline-item bg-sea"><div class="bg-container"><img src="240107.jpg" alt="우리의 사진"></div><div class="timeline-content">24.01.08<br>다시.강릉🌊</div></div>
@@ -58,6 +72,7 @@
         <div class="timeline-item"><div class="bg-container"><img src="241116.jpg" alt="우리의 사진"></div><div class="timeline-content">24.11.16<br>롯데..문어?!🐙</div></div>
         <div class="timeline-item bg-winter"><div class="timeline-content">24.12.25<br>❄️스키이⛷️</div><div class="bg-container"><img src="241215.jpg" alt="우리의 사진"></div></div>
         <div class="timeline-item"><div class="bg-container"><img src="250223.jpg" alt="우리의 사진"></div><div class="timeline-content">25.02.23<br>현재</div></div>
+        <div class="final-message">사랑해 지현아<br>지금까지 함께여서 너무 고마웠고<br>앞으로도 계속 함께하자! 💕</div>
     </div>
 </body>
 </html>
