@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꺄아앙 으헿헿ㅎㅎㅎ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        body { background-color: #f8e8e3; font-family: 'Arial', sans-serif; }
+        .timeline { position: relative; width: 90%; margin: auto; }
+        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; width: 4px; height: 100%; background-color: #ff85a2; transform: translateX(-50%); }
+        .timeline-item { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; }
+        .timeline-content { width: 45%; background: linear-gradient(135deg, #ffd3e3, #fff); padding: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); text-align: center; font-weight: bold; font-size: 1.2rem; position: relative; }
+        .bg-container { position: relative; width: 45%; height: auto; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .bg-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; }
+        .bg-sea, .bg-spring, .bg-heart, .bg-winter { position: relative; }
+        .bg-sea::before, .bg-spring::before, .bg-heart::before, .bg-winter::before {
+            content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0.7; z-index: 1;
+        }
+        .bg-sea::before { background: url('wave_effect.gif') center/cover; }
+        .bg-spring::before { background: url('cherry_blossom_effect.gif') center/cover; }
+        .bg-heart::before { background: url('heart_effect.gif') center/cover; }
+        .bg-winter::before { background: url('snow_effect.gif') center/cover; }
+        .snowflake { position: absolute; top: -10px; background: white; width: 10px; height: 10px; border-radius: 50%; opacity: 0.8; animation: snowfall 5s linear infinite; }
+        @keyframes snowfall { from { transform: translateY(-10px); } to { transform: translateY(100%); } }
+        h1 { font-family: 'Jua', sans-serif; }
+    </style>
+</head>
+<body class="flex flex-col items-center p-4">
+    <h1 class="text-4xl font-bold mb-4 text-black-600">지현💖영민</h1>
+    <audio autoplay loop>
+        <source src="『유이카』 _「좋아하니까.(好きだから。)」.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const audio = document.querySelector('audio');
+            audio.volume = 0.5; 
+            audio.play().catch(error => console.log("자동 재생이 차단되었습니다."));
+        });
+    </script>
+    <div class="timeline">
+        <div class="timeline-item"><div class="timeline-content">여름이여따..☘️</div><div class="bg-container"><img src="220618.jpg" alt="우리의 사진"></div></div>
+        <div class="timeline-item"><div class="bg-container"><img src="220927.jpg" alt="우리의 사진"></div><div class="timeline-content">22.09.27 버스정류장에서💘 </div></div>
+        <div class="timeline-item bg-sea"><div class="timeline-content">22.12.15 강릉바다🌊 </div><div class="bg-container"><img src="221225.jpg" alt="우리의 사진"></div></div>
+        <div class="timeline-item bg-heart"><div class="bg-container"><img src="230107.webp" alt="우리의 사진"></div><div class="timeline-content">💖23.01.08 말랑생일🎉 </div></div>
+        <div class="timeline-item bg-spring"><div class="timeline-content">23.03.01 꽃! 벚꽃!🌸</div><div class="bg-container"><img src="230401.jpg" alt="우리의 사진"></div></div>
+        <div class="timeline-item bg-heart"><div class="bg-container"><img src="230626.jpg" alt="우리의 사진"></div><div class="timeline-content">💖 23.06.26 1주년 커플링</div></div>
+        <div class="timeline-item"><div class="timeline-content">23.08.06 그냥 기여워서 넣은 사진❤️ </div><div class="bg-container"><img src="230806.jpg" alt="우리의 사진"></div></div>
+        <div class="timeline-item bg-sea"><div class="bg-container"><img src="240107.jpg" alt="우리의 사진"></div><div class="timeline-content">24.01.08 다시.강릉🌊</div></div>
+        <div class="timeline-item"><div class="timeline-content">24.09.28 축제!🎆</div><div class="bg-container"><img src="240928.jpg" alt="우리의 사진"></div></div>
+        <div class="timeline-item"><div class="bg-container"><img src="241116.jpg" alt="우리의 사진"></div><div class="timeline-content">24.11.16 롯데..문어?!🐙</div></div>
+        <div class="timeline-item bg-winter"><div class="timeline-content">❄️24.12.25 스키이⛷️</div><div class="bg-container"><img src="241215.jpg" alt="우리의 사진"></div></div>
+        <div class="timeline-item"><div class="bg-container"><img src="250223.jpg" alt="우리의 사진"></div><div class="timeline-content">25.02.23 현재</div></div>
+    </div>
+</body>
+</html>
