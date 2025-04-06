@@ -1,78 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>꺄아앙 으헿헿ㅎㅎㅎ</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-        body { background-color: #f8e8e3; font-family: 'Arial', sans-serif; }
-        .timeline { position: relative; width: 90%; margin: auto; }
-        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; width: 4px; height: calc(100% - 170px); background-color: #ff85a2; transform: translateX(-50%); }
-        .timeline-item { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; }
-        .timeline-item { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; }
-        .timeline-content { width: 45%; background: linear-gradient(135deg, #ffd3e3, #fff); padding: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); text-align: center; font-weight: bold; font-size: 0.8rem; position: relative; }
-        .bg-container { position: relative; width: 45%; height: auto; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        .bg-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; }
-        .bg-sea, .bg-spring, .bg-heart, .bg-winter { position: relative; }
-        .bg-sea::before, .bg-spring::before, .bg-heart::before, .bg-winter::before {
-            content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0.7; z-index: 1;
-        }
-        .bg-sea::before { background: url('wave_effect.gif') center/cover; }
-        .bg-spring::before { background: url('cherry_blossom_effect.gif') center/cover; }
-        .bg-heart::before { background: url('heart_effect.gif') center/cover; }
-        .bg-winter::before { background: url('snow_effect.gif') center/cover; }
-        .snowflake { position: absolute; top: -10px; background: white; width: 10px; height: 10px; border-radius: 50%; opacity: 0.8; animation: snowfall 5s linear infinite; }
-        @keyframes snowfall { from { transform: translateY(-10px); } to { transform: translateY(100%); } }
-        h1 { font-family: 'Jua', sans-serif; }
-        .final-message {
-            font-family: 'Jua', sans-serif;
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #ff5e78;
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: linear-gradient(135deg, #ffd3e3, #fff);
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-    
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>고마웠어, 안녕</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f5f0;
+      font-family: 'Noto Serif KR', serif;
+      color: #333;
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      padding: 2rem 1.5rem;
+      max-width: 600px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      box-sizing: border-box;
+    }
+
+    p {
+      margin: 1rem 0;
+      white-space: pre-wrap;
+    }
+
+    .signature {
+      margin-top: 2.5rem;
+      text-align: right;
+      font-weight: 500;
+      color: #666;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
 </head>
-<body class="flex flex-col items-center p-4">
-    <h1 class="text-4xl font-bold mb-4 text-black-600">지현❤️영민</h1>
-    <audio id="bgm" autoplay loop muted>
-        <source src="『유이카』 _「좋아하니까.(好きだから。)」.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const audio = document.getElementById('bgm');
-            audio.volume = 0.5;
-            audio.play().catch(() => {
-                document.body.addEventListener('click', () => {
-                    audio.muted = false;
-                    audio.play();
-                }, { once: true });
-            });
-        });
-    </script>
+<body>
+  <div class="container">
+    <p>너가 다시 이 페이지에 들어올지는 모르겠지만, 마음을 정리할 겸 너에게 미처 하지 못한 말들을 적어봐.</p>
     
-    <div class="timeline">
-        <div class="timeline-item"><div class="timeline-content">여름이여따..☘️</div><div class="bg-container"><img src="220618.jpg" alt="우리의 사진"></div></div>
-        <div class="timeline-item"><div class="bg-container"><img src="220927.jpg" alt="우리의 사진"></div><div class="timeline-content">22.09.27<br>버스정류장에서💘 </div></div>
-        <div class="timeline-item bg-sea"><div class="timeline-content">22.12.15<br>강릉바다🌊 </div><div class="bg-container"><img src="221225.jpg" alt="우리의 사진"></div></div>
-        <div class="timeline-item bg-heart"><div class="bg-container"><img src="230107.webp" alt="우리의 사진"></div><div class="timeline-content">23.01.08<br>말랑생일🎉 </div></div>
-        <div class="timeline-item bg-spring"><div class="timeline-content">23.03.01 <br>꽃! 벚꽃!🌸</div><div class="bg-container"><img src="230401.jpg" alt="우리의 사진"></div></div>
-        <div class="timeline-item bg-heart"><div class="bg-container"><img src="230626.jpg" alt="우리의 사진"></div><div class="timeline-content">23.06.26<br>1주년 커플링💍</div></div>
-        <div class="timeline-item"><div class="timeline-content">23.08.06<br>그냥 기여워서<br>넣은 사진❤️ </div><div class="bg-container"><img src="230806.jpg" alt="우리의 사진"></div></div>
-        <div class="timeline-item bg-sea"><div class="bg-container"><img src="240107.jpg" alt="우리의 사진"></div><div class="timeline-content">24.01.08<br>다시.강릉🌊</div></div>
-        <div class="timeline-item"><div class="timeline-content">24.09.28<br>축제! 🎆</div><div class="bg-container"><img src="240928.jpg" alt="우리의 사진"></div></div>
-        <div class="timeline-item"><div class="bg-container"><img src="241116.jpg" alt="우리의 사진"></div><div class="timeline-content">24.11.16<br>롯데..무너?!🐙</div></div>
-        <div class="timeline-item bg-winter"><div class="timeline-content">24.12.25<br>❄️스키이⛷️</div><div class="bg-container"><img src="241215.jpg" alt="우리의 사진"></div></div>
-        <div class="timeline-item"><div class="bg-container"><img src="250223.jpg" alt="우리의 사진"></div><div class="timeline-content">25.02.23<br>.<br>.</div></div>
-        <div class="final-message">사랑해 지현아<br>지금까지 함께여서 너무 고마웠고<br>앞으로도 계속 함께하자! 💕</div>
-    </div>
+    <p>너와 함께한 3년은 나에게 모든 게 처음이었어. 첫 사랑, 첫 연애. 그래서 많이 서툴고 부족했지. 그런 나를 지현이가 대신 이끌어주고 도와준 덕분에 여기까지 올 수 있었어.</p>
+    
+    <p>정말 많이 웃고, 또 많이 울기도 했던 3년이었지만, 그럼에도 참 행복했어. 다시 올 수 있을까 싶은, 너무나 좋았던 날들이었지.</p>
+    
+    <p>최근엔 익숙해진 감정에 기대서, 점점 덜 노력하고 편하게만 생각했던 것 같아. 지금 와서 돌이켜보면, 못해준 것들만 자꾸 떠오르더라. 미안해.</p>
+    
+    <p>그럼에도 불구하고 지금까지 나를 많이 좋아해주고, 사랑해줘서 정말 고마워. 이 말은 꼭 다시 전하고 싶었어. 고마워. 정말 많이 고마웠어.</p>
+    
+    <p>이제는 지현이가 더 좋은 사람 만나서, 앞으로도 늘 행복하게 잘 지냈으면 해.</p>
+
+    <p class="signature">고마웠어. 안녕.</p>
+  </div>
 </body>
 </html>
